@@ -10,7 +10,7 @@ const GetTestData=  (file) =>{
     return data
 }
 export default function handler(req, res) {
-
+const file = req.body.file
    const data =   GetTestData('cpi.json');
    console.log(data)
    res.send( data)
