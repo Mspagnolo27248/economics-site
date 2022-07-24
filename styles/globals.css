@@ -43,3 +43,18 @@ li{
   padding: 10px;
   
 }
+
+  /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 600px) and (max-width: 1024px){
+    body {
+        background-color: blue;
+    }
+
+    .chart-container{
+      position: relative; 
+      width:100%;
+      display: inline-block;
+      padding: 10px;
+      
+    }
+}

@@ -1,0 +1,232 @@
+{
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "observation_start": "2019-07-01",
+    "observation_end": "2022-07-22",
+    "units": "lin",
+    "output_type": 1,
+    "file_type": "json",
+    "order_by": "observation_date",
+    "sort_order": "asc",
+    "count": 36,
+    "offset": 0,
+    "limit": 100000,
+    "observations": [
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2019-07-01",
+    "value": "518670"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2019-08-01",
+    "value": "521158"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2019-09-01",
+    "value": "517755"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2019-10-01",
+    "value": "519519"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2019-11-01",
+    "value": "521774"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2019-12-01",
+    "value": "525903"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-01-01",
+    "value": "524063"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-02-01",
+    "value": "526174"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-03-01",
+    "value": "480150"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-04-01",
+    "value": "407025"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-05-01",
+    "value": "483066"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-06-01",
+    "value": "525093"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-07-01",
+    "value": "536087"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-08-01",
+    "value": "540078"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-09-01",
+    "value": "551871"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-10-01",
+    "value": "550049"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-11-01",
+    "value": "543834"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2020-12-01",
+    "value": "542942"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-01-01",
+    "value": "572822"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-02-01",
+    "value": "562686"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-03-01",
+    "value": "625731"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-04-01",
+    "value": "625764"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-05-01",
+    "value": "622921"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-06-01",
+    "value": "627756"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-07-01",
+    "value": "620648"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-08-01",
+    "value": "624738"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-09-01",
+    "value": "630905"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-10-01",
+    "value": "640899"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-11-01",
+    "value": "644741"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2021-12-01",
+    "value": "634393"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2022-01-01",
+    "value": "651557"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2022-02-01",
+    "value": "662321"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2022-03-01",
+    "value": "669958"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2022-04-01",
+    "value": "674719"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2022-05-01",
+    "value": "673852"
+    },
+    {
+    "realtime_start": "2022-07-24",
+    "realtime_end": "2022-07-24",
+    "date": "2022-06-01",
+    "value": "680591"
+    }
+    ]
+    }

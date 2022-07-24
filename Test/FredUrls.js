@@ -22,13 +22,20 @@ export const HomeSupply = 'MSACSR';
 export const GDP = 'https://api.stlouisfed.org/fred/series/observations?series_id=GDPC1&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 export const RetailSales = '';
 export const  DurableGoods = '';
+export const IndustrialProduction = 'INDPRO';
+//'https://api.stlouisfed.org/fred/series/observations?series_id=INDPRO&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 export const ManufactorsIndex = ''
-
+export const PotentialNominalGDP= 'NGDPPOT';
 
 //Labor 
 export const UnemploymentRate = 'UNRATE';
+//'https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 export const LaborForceParticipation = 'CIVPART';
+//'https://api.stlouisfed.org/fred/series/observations?series_id=CIVPART&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 export const NonFarmEmployment = 'PAYEMS';
+//'https://api.stlouisfed.org/fred/series/observations?series_id=PAYEMS&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
+export const LaborForce = 'CLF16OV'
+//'https://api.stlouisfed.org/fred/series/observations?series_id=CLF16OV&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 
 
 //Interest Rates

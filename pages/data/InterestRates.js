@@ -66,12 +66,20 @@ const optionsTenMinusTwos = {
 
 const chartDataTenMinusTwos = {
   labels: props.tensMinusTwos.observations.map((item)=>item.date),
-  datasets: [{
+  datasets: [
+    {
     label: '%',
     borderColor: 'rgb(255, 99, 132)',
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     data: props.tensMinusTwos.observations.map((item)=>item.value),
-  }]
+  },
+  {
+    label: '0',
+    borderColor: 'rgb(0,0 , 0)',
+      backgroundColor: 'rgba(255, 99, 132, 0.5)',
+    data: props.tensMinusTwos.observations.map((item)=>0),
+  }
+]
 }
 
 //--------------------------BreakEven Rates (Inflation Expectations)------------------------
