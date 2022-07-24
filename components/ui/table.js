@@ -13,7 +13,7 @@ export default function Table(props) {
     <th>Change</th>
     </tr>
     {props.data.map((item)=> 
-    <tr>
+    <tr key={item.date}>
     <td>{item.date}</td>
     <td>{item.value}</td>
     
