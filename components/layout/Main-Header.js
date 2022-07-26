@@ -11,14 +11,17 @@ export default function MainHeader() {
 
     <nav className={classes.navigation}>
         <ul>
-            <li>
-                <Link href='/data'>Link1</Link>
+            <li className={classes.link}>
+                <Link href='/data/Employment'>Employment</Link>
             </li>
-            <li>
-                <Link href='#'>Link1</Link>
+            <li className={classes.link}>
+                <Link href='/data/Inflation'>Inflation</Link>
             </li>
-            <li>
-                <Link href='#'>Link1</Link>
+            <li className={classes.link}>
+                <Link href='/data/GDP'>GDP</Link>
+            </li>
+            <li className={classes.link}>
+                <Link href='/data/InterestRates'>Rates</Link>
             </li>
         </ul>
     </nav>

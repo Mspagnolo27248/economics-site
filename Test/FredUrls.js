@@ -1,12 +1,14 @@
 
 
 //Inflation
-export const CPI = 'CPIAUCSL'
+export const headCPIIndex = 'CPIAUCSL'
 //https://api.stlouisfed.org/fred/series/observations?series_id=CPIAUCSL&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json
 export const CpiChgPrevPeriord  ='CPALTT01USM657N';
 //https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01USM657N&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json
 export const CpiPrevYear = 'CPALTT01USM659N'
 //https://api.stlouisfed.org/fred/series/observations?series_id=CPALTT01USM659N&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json
+export const coreCpiIndex = 'CPILFESL'
+//https://api.stlouisfed.org/fred/series/observations?series_id=CPILFESL&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json
 export const PCE = 'PCE'
 //https://api.stlouisfed.org/fred/series/observations?series_id=PCE&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json
 export const M2 ='WM2NS'
@@ -16,12 +18,17 @@ export const M2 ='WM2NS'
 //Housing
 export const Mortgage = 'https://api.stlouisfed.org/fred/series/observations?series_id=MORTGAGE30US&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json';
 export const HomeSupply = 'MSACSR';
+export const newHomeSales = '';
+export const existingHomeSales = '';
+export const medianHomePrice = '';
 
 
 //Growth
 export const GDP = 'https://api.stlouisfed.org/fred/series/observations?series_id=GDPC1&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
-export const RetailSales = '';
-export const  DurableGoods = '';
+export const AdvanceRetailSalesAndFoodService = 'RSAFS';
+export const AdvancedRetailSalesTrade= 'RSXFS';
+export const RetailSalesAndFoodService = 'MRTSSM44X72USS';
+export const  DurableGoods = 'DGORDER';
 export const IndustrialProduction = 'INDPRO';
 //'https://api.stlouisfed.org/fred/series/observations?series_id=INDPRO&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 export const ManufactorsIndex = ''

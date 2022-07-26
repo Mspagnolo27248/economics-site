@@ -1,0 +1,10 @@
+.release{
+display: inline-block;
+padding: 10px;
+width: 175px;
+text-align: center;
+}
+
+.releaseContainer{
+    width: 100%;
+}

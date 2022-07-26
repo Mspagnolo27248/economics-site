@@ -28,7 +28,8 @@ ul {
   
 }
 
-li{
+
+li .link{
   display: inline;
 }
 .center {
@@ -45,9 +46,9 @@ li{
 }
 
   /* Media Query for Tablets Ipads portrait mode */
-  @media (min-width: 600px) and (max-width: 1024px){
+  @media (min-width: 200px) and (max-width: 1024px){
     body {
-        background-color: blue;
+        background-color: #202020;
     }
 
     .chart-container{
