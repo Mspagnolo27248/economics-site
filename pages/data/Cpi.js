@@ -2,6 +2,10 @@ import React, { Fragment, useEffect,useState } from 'react'
 import Table from '../../components/ui/table'
 import { Line } from 'react-chartjs-2';
 
+
+///This is an example of how you can call FRED from client side with only react
+// you need to deal with the CORS issue by fetch() to the backend api of this app
+/// then inside that route you can call the FRED api.
 import {
   Chart as ChartJS,
   CategoryScale,

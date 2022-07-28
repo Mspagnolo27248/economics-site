@@ -1,8 +1,9 @@
 import React, { Fragment, useEffect,useState } from 'react'
 import LineChart from '../../components/chart/LineChart'
-import {GetTestData} from '../../Utilities/fs_wrapper'
 import {SetChartOptions} from '../../Utilities/chart-js-wrapper'
 import { SetChartData } from '../../Utilities/chart-js-wrapper'
+import { FetchSeriesObservationData } from '../../Utilities/fetch-fred'
+
 
 
 
@@ -42,41 +43,47 @@ const DurableGoodsChartData = SetChartData(
 
 
   return (
-    <Fragment>
-    <div>    
-    <LineChart chartData={GDPChartData} chartOptions={GDPChartOptions}/>  
-    <LineChart chartData={IndustrialProductionChartData} chartOptions={IndustrialProductionChartOptions}/>
-    </div>
-
-    <div>    
-    <LineChart chartData={RetailSalesChartData} chartOptions={RetailSalesChartOptions}/>  
-    <LineChart chartData={DurableGoodsChartData} chartOptions={DurableGoodsChartOptions}/>
-    </div>
-
-  
- 
+      <Fragment>
+        <div>    
+          <LineChart chartData={GDPChartData} chartOptions={GDPChartOptions}/>  
+          <LineChart chartData={IndustrialProductionChartData} chartOptions={IndustrialProductionChartOptions}/>
+        </div>
+        <div>    
+          <LineChart chartData={RetailSalesChartData} chartOptions={RetailSalesChartOptions}/>  
+          <LineChart chartData={DurableGoodsChartData} chartOptions={DurableGoodsChartOptions}/>
+        </div>
     </Fragment>
   )
 }
 
 export async function getStaticProps(){
- 
-    const GDP = GetTestData('GDP.json');
-    const  IndustrialProduction = GetTestData('IndustrialProduction.json');
-    const AdvancedRetailSales = GetTestData('AdvancedRetailSales.json')
-    const RetailSales = GetTestData('RetailSales.json')
-    const DurableGoods = GetTestData('durableGoods.json')
 
-        return{
-            props:{
-                GDP:GDP,
-                IndustrialProduction:IndustrialProduction,
-                AdvancedRetailSales:AdvancedRetailSales,
-                RetailSales:RetailSales,
-                DurableGoods:DurableGoods,              
+    
+      async function GetData (){
+      const start_date = '2018-10-01';
+      const end_date = '2022-07-01';
+      const GDP = await FetchSeriesObservationData('GDP',start_date,end_date);
+      const  IndustrialProduction =  await FetchSeriesObservationData('INDPRO',start_date,end_date);
+      const AdvancedRetailSales = await FetchSeriesObservationData('RSXFS',start_date,end_date);
+      const RetailSales = await FetchSeriesObservationData('MRTSSM44X72USS',start_date,end_date);
+      const DurableGoods =  await FetchSeriesObservationData('DGORDER',start_date,end_date);
+      return {
+        props:{
+          GDP:GDP,
+          IndustrialProduction:IndustrialProduction,
+          AdvancedRetailSales:AdvancedRetailSales,
+          RetailSales:RetailSales,
+          DurableGoods:DurableGoods,              
 
-            }
-        }
+      }
+      }
+    }
+
+     return  GetData()
+        .then((data)=>{return data})
+    
+
+      
 }
 
 
