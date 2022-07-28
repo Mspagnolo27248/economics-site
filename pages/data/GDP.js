@@ -3,7 +3,7 @@ import LineChart from '../../components/chart/LineChart'
 import {SetChartOptions} from '../../Utilities/chart-js-wrapper'
 import { SetChartData } from '../../Utilities/chart-js-wrapper'
 import { FetchSeriesObservationData } from '../../Utilities/fetch-fred'
-
+import { GetTestData } from '../../Utilities/fs_wrapper'
 
 
 
@@ -57,30 +57,28 @@ const DurableGoodsChartData = SetChartData(
 }
 
 export async function getStaticProps(){
-
-    
-      async function GetData (){
+    const fredCodes = GetTestData('FRED-series.json');
+    // TODO - try promise.all()
+     
       const start_date = '2018-10-01';
       const end_date = '2022-07-01';
-      const GDP = await FetchSeriesObservationData('GDP',start_date,end_date);
+      const GDP = await FetchSeriesObservationData(fredCodes.GDP,start_date,end_date);
       const  IndustrialProduction =  await FetchSeriesObservationData('INDPRO',start_date,end_date);
       const AdvancedRetailSales = await FetchSeriesObservationData('RSXFS',start_date,end_date);
       const RetailSales = await FetchSeriesObservationData('MRTSSM44X72USS',start_date,end_date);
       const DurableGoods =  await FetchSeriesObservationData('DGORDER',start_date,end_date);
+      
       return {
         props:{
           GDP:GDP,
           IndustrialProduction:IndustrialProduction,
           AdvancedRetailSales:AdvancedRetailSales,
           RetailSales:RetailSales,
-          DurableGoods:DurableGoods,              
-
-      }
-      }
+          DurableGoods:DurableGoods,          
+        }
     }
 
-     return  GetData()
-        .then((data)=>{return data})
+   
     
 
       

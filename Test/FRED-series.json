@@ -1,0 +1,36 @@
+
+  {
+   "headCPIIndex" : "CPIAUCSL", 
+    "CpiChgPrevPeriord"  :"CPALTT01USM657N", 
+    "CpiPrevYear" : "CPALTT01USM659N",     
+    "coreCpiIndex" : "CPILFESL", 
+    "PCE" : "PCE" ,
+     "TenYearBreakEven" : "T10YIE",
+    "M2" :"WM2NS",
+    "Mortgage" : "MORTGAGE30US",
+    "HomeSupply" : "MSACSR",
+    "newHomeSales" : "",
+    "existingHomeSales" : "",
+    "medianHomePrice" : "",
+    "RealGDP" : "GDPC1",
+     "GDP" :  "GDP",
+    "AdvanceRetailSalesAndFoodService" : "RSAFS",
+    "AdvancedRetailSalesTrade": "RSXFS",
+    "RetailSalesAndFoodService" : "MRTSSM44X72USS",
+     "DurableGoods" : "DGORDER",
+    "IndustrialProduction" : "INDPRO",
+    "ManufactorsIndex" : "",
+    "PotentialNominalGDP": "NGDPPOT",
+    "UnemploymentRate" : "UNRATE",
+    "LaborForceParticipation" : "CIVPART",
+    "NonFarmEmployment" : "PAYEMS",
+    "LaborForce" : "CLF16OV",
+    "IntrestRatesTensLessTwos" : "T10Y2Y",
+    "TenYearTreasury" : "DGS10",
+    "TenYearInflationIndexTreasury" : "DFII10",
+    "FedFunds" : "FEDFUNDS",
+    "FedFundsUpperTarget" : "DFEDTARU",
+    "releases" : "https://api.stlouisfed.org/fred/releases?observation_start:2019-07-01&observation_end:2022-07-22&api_key:3930e57c78d990d30f7d376f5c406e2e&file_type:json"
+  
+  }
+
