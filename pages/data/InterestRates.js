@@ -2,7 +2,7 @@ import React, { Fragment, useEffect,useState } from 'react'
 import Table from '../../components/ui/table'
 import { Line } from 'react-chartjs-2';
 import {GetTestData} from '../../Utilities/fs_wrapper'
-
+import { FetchReleaseData } from '../../Utilities/fetch-fred';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -172,6 +172,7 @@ export async function getStaticProps(){
     const breakevens = GetTestData('TenYearBreakEven.json')
     const fedFundsTarget = GetTestData('FedFundsUpperTarget.json')
 
+    const dt = FetchReleaseData();
         return{
             props:{
                 tenYear:tenYear,

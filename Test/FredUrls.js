@@ -24,7 +24,8 @@ export const medianHomePrice = '';
 
 
 //Growth
-export const GDP = 'https://api.stlouisfed.org/fred/series/observations?series_id=GDPC1&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
+export const RealGDP = 'https://api.stlouisfed.org/fred/series/observations?series_id=GDPC1&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
+export const  GDP =  'https://api.stlouisfed.org/fred/series/observations?series_id=GDP&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 export const AdvanceRetailSalesAndFoodService = 'RSAFS';
 export const AdvancedRetailSalesTrade= 'RSXFS';
 export const RetailSalesAndFoodService = 'MRTSSM44X72USS';
@@ -33,7 +34,6 @@ export const IndustrialProduction = 'INDPRO';
 //'https://api.stlouisfed.org/fred/series/observations?series_id=INDPRO&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
 export const ManufactorsIndex = ''
 export const PotentialNominalGDP= 'NGDPPOT';
-
 //Labor 
 export const UnemploymentRate = 'UNRATE';
 //'https://api.stlouisfed.org/fred/series/observations?series_id=UNRATE&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'; 
@@ -59,3 +59,5 @@ export const FedFunds = 'FEDFUNDS'
 export const FedFundsUpperTarget = 'DFEDTARU'
 //https://api.stlouisfed.org/fred/series/observations?series_id=DFEDTARU&observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json
 
+//Releases
+export const releases = 'https://api.stlouisfed.org/fred/releases?observation_start=2019-07-01&observation_end=2022-07-22&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json'
