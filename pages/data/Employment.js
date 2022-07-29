@@ -3,46 +3,42 @@ import LineChart from '../../components/chart/LineChart'
 import {GetTestData} from '../../Utilities/fs_wrapper'
 import {SetChartOptions} from '../../Utilities/chart-js-wrapper'
 import { SetChartData } from '../../Utilities/chart-js-wrapper'
-import { LaborForce } from '../../Test/FredUrls'
+import { FetchSeriesObservationData } from '../../Utilities/fetch-fred'
+
 
 
 export default function EmploymentPage(props) {
 
-const UnemplymentChartData =  SetChartData(
-  props.UnemploymentRate.observations.map((item)=>item.value),
-  props.UnemploymentRate.observations.map((item)=>item.date),
-    '%'
-    )
-
 const UnemploymentChartOptions = SetChartOptions('Unemployment Rate')
+const UnemplymentChartData =  SetChartData(
+props.UnemploymentRate.observations.map((item)=>item.value),
+props.UnemploymentRate.observations.map((item)=>item.date),
+'%'
+)
+
 
 const LaborForceChartOptions = SetChartOptions('Labor Force Participation Rate')
-
 const LaborForceChartData =  SetChartData(
-    props.LaborForceParticipation.observations.map((item)=>item.value),
-  props.LaborForceParticipation.observations.map((item)=>item.date),
-    '%'
-    )
+props.LaborForceParticipation.observations.map((item)=>item.value),
+props.LaborForceParticipation.observations.map((item)=>item.date),
+'%'
+)
 
-    const EmploymentChartOptions = SetChartOptions('Employeed Workers')
 
-    const EmploymentChartData =  SetChartData(
-        props.Employment.observations.map((item)=>item.value),
-      props.Employment.observations.map((item)=>item.date),
-        'Workers'
-        )
+const EmploymentChartOptions = SetChartOptions('Employeed Workers')
+const EmploymentChartData =  SetChartData(
+props.Employment.observations.map((item)=>item.value),
+props.Employment.observations.map((item)=>item.date),
+'Workers'
+)
+
 
 const TotalLaborForceChartOptions = SetChartOptions('Total Labor Force  (Workers)')
-
 const TotalLaborForceChartData =  SetChartData(
-    props.LaborForce.observations.map((item)=>item.value),
-    props.LaborForce.observations.map((item)=>item.date),
-    'Workers'
-    )
-
-
-
-
+props.LaborForce.observations.map((item)=>item.value),
+props.LaborForce.observations.map((item)=>item.date),
+'Workers'
+)
 
 
   return (
@@ -62,11 +58,15 @@ const TotalLaborForceChartData =  SetChartData(
 }
 
 export async function getStaticProps(){
- 
-    const UnemploymentRate = GetTestData('UnemplymentRate.json');
-    const LaborForceParticipation = GetTestData('LaborForceParticipation.json');
-    const Employment = GetTestData('Employement.json');
-    const LaborForce = GetTestData('LaborForce.json')
+    const fredCodes = GetTestData('FRED-series.json');
+    const now = new Date().toISOString().substring(0,10);
+    const start_date = '2015-10-01';
+    const end_date =  now.toString();
+    
+    const UnemploymentRate =  await FetchSeriesObservationData(fredCodes.UnemploymentRate,start_date,end_date);
+    const LaborForceParticipation = await  FetchSeriesObservationData(fredCodes.LaborForceParticipation,start_date,end_date);
+    const Employment = await FetchSeriesObservationData(fredCodes.NonFarmEmployment,start_date,end_date);
+    const LaborForce = await FetchSeriesObservationData(fredCodes.LaborForce,start_date,end_date);
         return{
             props:{
                 UnemploymentRate:UnemploymentRate,

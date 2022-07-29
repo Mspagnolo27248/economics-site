@@ -3,6 +3,7 @@ import LineChart from '../../components/chart/LineChart'
 import {GetTestData} from '../../Utilities/fs_wrapper'
 import {SetChartOptions} from '../../Utilities/chart-js-wrapper'
 import { SetChartData } from '../../Utilities/chart-js-wrapper'
+import { FetchReleaseData, FetchSeriesObservationData } from '../../Utilities/fetch-fred'
 
 
 
@@ -60,11 +61,15 @@ const headCpiIndexData = SetChartData(
 }
 
 export async function getStaticProps(){
- 
-    const cpiMom = GetTestData('CPI-percent-mom.json');
-    const cpiYoy = GetTestData('CPI-percent-prev-year.json');
-    const coreCpiIndex = GetTestData('coreCpiIndex.json')
-    const headCpiIndex = GetTestData('headCpiIndex.json')
+    const fredCodes = GetTestData('FRED-series.json');
+    const now = new Date().toISOString().substring(0,10);
+    const start_date = '2015-10-01';
+    const end_date =  now.toString();
+    
+    const cpiMom =  await FetchSeriesObservationData(fredCodes.CpiChgPrevPeriord,start_date,end_date);
+    const cpiYoy =  await FetchSeriesObservationData(fredCodes.CpiPrevYear,start_date,end_date);
+    const coreCpiIndex = await FetchSeriesObservationData(fredCodes.coreCpiIndex,start_date,end_date)
+    const headCpiIndex = await FetchSeriesObservationData(fredCodes.headCPIIndex,start_date,end_date)
 
         return{
             props:{

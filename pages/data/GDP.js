@@ -57,11 +57,11 @@ const DurableGoodsChartData = SetChartData(
 }
 
 export async function getStaticProps(){
-    const fredCodes = GetTestData('FRED-series.json');
-    // TODO - try promise.all()
-     
-      const start_date = '2018-10-01';
-      const end_date = '2022-07-01';
+     // TODO - try promise.all()
+      const fredCodes = GetTestData('FRED-series.json');
+      const now = new Date().toISOString().substring(0,10);
+      const start_date = '2015-10-01';
+      const end_date =  now.toString();
       const GDP = await FetchSeriesObservationData(fredCodes.GDP,start_date,end_date);
       const  IndustrialProduction =  await FetchSeriesObservationData('INDPRO',start_date,end_date);
       const AdvancedRetailSales = await FetchSeriesObservationData('RSXFS',start_date,end_date);
