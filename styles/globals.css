@@ -44,6 +44,18 @@ li .link{
   padding: 10px;
   
 }
+.large-chart-container
+{
+  position: fixed;
+  /* center the element */
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  /* give it dimensions */
+  min-height: 10em;
+  width: 80%;
+}
 
   /* Media Query for Tablets Ipads portrait mode */
   @media (min-width: 200px) and (max-width: 1024px){

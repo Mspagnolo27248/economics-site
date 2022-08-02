@@ -26,7 +26,7 @@ export default function ReleasePage
         <div className={classes.gridItem}>  Two Back Release  </div>
     {props.testData.map((item)=>{
         return (
-       <Fragment >
+       <Fragment  key={item.serries_id}>
 
        <div className={`${classes.gridItem} ${classes.gridItem1} `} > {item.serries_id} </div>
         <div className={classes.gridItem}> {item.current}  </div>
