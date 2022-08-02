@@ -9,7 +9,7 @@ import path from 'path'
 
 export default function handler(req, res) {
   // const tagList = ['GDP','GDPC1']
-  const seriesTags =  FetchReleaseData()
+  const seriesTags = await  FetchReleaseData()
   
   
   
