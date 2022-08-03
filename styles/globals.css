@@ -57,6 +57,28 @@ li .link{
   width: 80%;
 }
 
+
+.card-list{
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 5%;
+
+}
+
+.card{
+  width: 30%;
+  height: 200px;
+  display: inline-block;
+  background-color: rgb(166, 179, 179);
+  margin: 15px;
+  text-align: center;
+  border-radius: 10%;
+  vertical-align: middle;
+}
+
   /* Media Query for Tablets Ipads portrait mode */
   @media (min-width: 200px) and (max-width: 1024px){
     body {
@@ -70,4 +92,6 @@ li .link{
       padding: 10px;
       
     }
+
+  
 }

@@ -2,8 +2,18 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../styles/Home.module.css'
+import { useRouter } from 'next/router'
 
 export default function DataHomePage() {
+  const router = useRouter();
+
+  const clickHandler = (event)=>{
+    const pathVariable = event.target.id
+   
+     router.push('/data/'+pathVariable)
+
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -15,8 +25,42 @@ export default function DataHomePage() {
       <main className={styles.main}>
        <h1>Welcome to Data Center </h1>
        <p>Links to data specific to various markets sectors.</p>
-       <Link href='/data/Employment'>Employment</Link>
+     
        
+      <div className='card-list'>
+
+          <div className='card' onClick={clickHandler} id='Employment'>
+              <h2>Employment Data</h2>
+              <p>Employment data is a leading indicator of potential economic output.</p>
+              <Link href='/data/Employment'>Data Center</Link>
+          </div>
+          
+          <div className='card' onClick={clickHandler} id='GDP'>
+              <h2>GDP Data</h2>
+              <p>GDP is the measure of economic output for the country. </p>
+              <Link href='/data/gdp'>Data Center</Link>
+          </div>
+
+          <div className='card' onClick={clickHandler} id='Inflation'>
+              <h2>Inflation Data</h2>
+              <p>Inflation is caused by too many dollars chasing to few goods. </p>
+              <Link href='/data/Inflation'>Inflation Center</Link>
+          </div>
+
+          <div className='card' onClick={clickHandler} id='Cpi'>
+              <h2>Cpi Data</h2>
+              <p>Cpi.</p>
+              <Link href='/data/cpi'>Data Center</Link>
+          </div>
+
+          <div className='card' onClick={clickHandler} id='InterestRates'>
+              <h2>Intrest Rate Data</h2>
+              <p>Interest Rates determine the price borrowers pay, and savers earn. </p>
+              <Link href='/data/InterestRates'>Rates Center</Link>
+          </div>
+
+
+      </div>
       </main>
 
       <footer className={styles.footer}>
