@@ -8,7 +8,7 @@ import { GetTestData } from '../../Utilities/fs_wrapper';
 
 export default function SeriesPage(props) {
 
-    
+     //TODO- update function to change chart legend based on series UOM update axis labels
 
     const [currentChartOptions,setCurrentChartOptions] = useState(
         SetChartOptions(props.serries)
@@ -30,7 +30,7 @@ const [currentData,setCurrentData] = useState(props.data)
     const series_id = useRef('GDP');
     const observation_start = useRef();
     const observation_end = useRef();
-   
+   const todaysDate = new Date().toISOString().split('T')[0]
 useEffect(()=>{
     setCurrentChartData(
         SetChartData(
@@ -39,7 +39,11 @@ useEffect(()=>{
         '$'
         ));
 
-        setCurrentChartOptions(SetChartOptions(series_id.current.value))
+        const selectedCurrentIndex = series_id.current.selectedIndex;
+        const selectedOption = series_id.current.options[selectedCurrentIndex].text;
+        const title = selectedOption+' - '+series_id.current.value
+
+        setCurrentChartOptions(SetChartOptions(title))
 },[currentData])
 
     const submitHandler= (event)=>{
@@ -72,17 +76,24 @@ useEffect(()=>{
         <form onSubmit={submitHandler}>
             <button> Get Data </button>
             <label htmlFor='series_id'>Economic Series</label>
-            <select id='series_id' ref={series_id}>
+            <select id='series_id' ref={series_id} defaultValue='GDP'>
+         
                {Object.keys(props.fredItems).map((key,index)=>{
-                return <option key={index} value={props.fredItems[key]}>{key}</option>
+                if(key==='GDP'){
+                    return <option key={index}   value={props.fredItems[key]}>{key}</option>
+                }
+                else{
+                    return <option key={index} value={props.fredItems[key]}>{key}</option>
+                }
+               
                })}
             </select>
             <label htmlFor='observation_start'>Start Date</label>
-            <input id ='observation_start' ref={observation_start}></input>
+            <input id ='observation_start' ref={observation_start} placeholder='yyyy-mm-dd'></input>
 
 
             <label htmlFor='observation_end' placeholder='yyyy-mm-dd'>End Date</label>
-            <input id ='observation_end' ref={observation_end} placeholder='yyyy-mm-dd'></input>
+            <input id ='observation_end' ref={observation_end} placeholder='yyyy-mm-dd'defaultValue={todaysDate}></input>
         </form>
     </div>
  <LineChartLarge chartData={currentChartData} chartOptions={currentChartOptions}/>
