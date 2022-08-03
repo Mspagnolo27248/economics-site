@@ -17,10 +17,10 @@ export default function MainHeader() {
                 <Link href='/data'>Data Center</Link>
             </li>
             <li className={classes.link}>
-                <Link href='/data/releases'>Releases</Link>
+                <Link href='/releases'>Releases</Link>
             </li>
             <li className={classes.link}>
-                <Link href='/data/Series'>Series</Link>
+                <Link href='/series'>Series</Link>
             </li>
             <li className={classes.link}>
                 <Link href='/data/InterestRates'>Rates</Link>
