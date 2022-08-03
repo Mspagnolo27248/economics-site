@@ -1,7 +1,7 @@
 
 
 export default function handler(req, res) {
-  
+  // Same thing
 fetch(
     'https://api.stlouisfed.org/fred/series/observations?'+
     'series_id=MORTGAGE30US&observation_start=2019-07-01&'+

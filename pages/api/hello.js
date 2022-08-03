@@ -8,13 +8,29 @@ import fs from 'fs';
 import path from 'path'
 
 export default function handler(req, res) {
-  // const tagList = ['GDP','GDPC1']
-  const seriesTags = await  FetchReleaseData()
+
+  FetchReleaseData('GDPC1')
+  .then((data)=>  JSON.stringify(data))
+  .then( (json)=>{
+     let testDataPath = path.join(process.cwd(),'Database/')
+  
+    fs.writeFile(testDataPath+'series.json', json
+    ,(err)=>{if(err){
+      console.log(err)
+      return res.status(500).json({Sucess:"false"})
+    }
+      else{
+        console.log('Success')
+      return   res.status(200).json({Sucess:"true"})
+      }
+    
+    }
+    )})
+    
+  } 
   
   
   
-  let json = JSON.stringify(seriesTags);
-  const testDataPath = path.join(process.cwd(),'Database')
-  fs.writeFile('seriess.json', json);
-}
+ 
+ 
 

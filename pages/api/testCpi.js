@@ -10,10 +10,23 @@ const GetTestData=  (file) =>{
     return data
 }
 export default function handler(req, res) {
-const file = req.body.file
-   const data =   GetTestData('cpi.json');
+
+if(req.method==='POST'){
+    const file = req.body.file
+   // const testDataPath = path.join(process.cwd(),'Test/')
+   const data =   GetTestData(file);
    console.log(data)
    res.send( data)
   }
+  else{
+    const file = req.query.file
+    //const testDataPath = path.join(process.cwd(),'Test/')
+   const data =   GetTestData(file);
+   console.log(data)
+   res.send( data)
+  }
+}
+
+
 
   
