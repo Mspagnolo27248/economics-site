@@ -33,13 +33,14 @@ return FutureReleaseDate
 }
 
 
-const data = []
- return getFredSync(52)
+const data =  getFredSync(52)
 .then((output)=> {return{
     props:{
         data:output
     }
 }});
+
+return data
    
 
 
