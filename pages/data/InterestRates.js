@@ -95,7 +95,7 @@ export async function getStaticProps(){
     const fredCodes = GetTestData('FRED-series.json');
     const now = new Date().toISOString().substring(0,10);
     const start_date = '2015-10-01';
-    const end_date =  now.toString();
+    const end_date =    new Date().toISOString().split('T')[0];
   
     const tenYear =  await FetchSeriesObservationData(fredCodes.TenYearTreasury,start_date,end_date);
     const tensMinusTwos = await FetchSeriesObservationData(fredCodes.IntrestRatesTensLessTwos,start_date,end_date);

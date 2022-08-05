@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         <div className='card' onClick={clickHandler} id='series'>
-          <h2>FRED series</h2>
+          <h2>FRED Series</h2>
           <p>Select a FRED economic serires to review the historical data and chart.</p>
           <Link href='/series'>Series</Link>
         </div>

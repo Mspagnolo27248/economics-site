@@ -4,7 +4,7 @@ import { FetchSeriesObservationData } from '../../Utilities/fetch-fred';
 import { SetChartData, SetChartOptions } from '../../Utilities/chart-js-wrapper';
 import LineChartLarge from '../../components/chart/LineChartLarge'
 import { GetTestData } from '../../Utilities/fs_wrapper';
-
+import classes from './series.module.css'
 
 export default function SeriesPage(props) {
 
@@ -74,9 +74,12 @@ useEffect(()=>{
     <Fragment>
     <div>
         <form onSubmit={submitHandler}>
-            <button> Get Data </button>
-            <label htmlFor='series_id'>Economic Series</label>
-            <select id='series_id' ref={series_id} defaultValue='GDP'>
+           
+            <div className={classes.formContainer}>
+
+           <div className={classes.formControls}> 
+           <label htmlFor='series_id' className={classes.formLabels}>Economic Series</label>
+            <select id='series_id' ref={series_id} defaultValue='GDP' className={classes.formInput}>
          
                {Object.keys(props.fredItems).map((key,index)=>{
                 if(key==='GDP'){
@@ -88,12 +91,23 @@ useEffect(()=>{
                
                })}
             </select>
-            <label htmlFor='observation_start'>Start Date</label>
-            <input id ='observation_start' ref={observation_start} placeholder='yyyy-mm-dd'></input>
+           </div>
+          
+           <div className={classes.formControls}> 
+          <label htmlFor='observation_start'  className={classes.formLabels}>Start Date</label>
+            <input id ='observation_start' ref={observation_start} placeholder='yyyy-mm-dd' className={classes.formInput}></input>
 
-
-            <label htmlFor='observation_end' placeholder='yyyy-mm-dd'>End Date</label>
-            <input id ='observation_end' ref={observation_end} placeholder='yyyy-mm-dd'defaultValue={todaysDate}></input>
+          </div>
+           
+          <div className={classes.formControls}> 
+        <label htmlFor='observation_end' placeholder='yyyy-mm-dd'  className={classes.formLabels}>End Date</label>
+            <input id ='observation_end' ref={observation_end} placeholder='yyyy-mm-dd'defaultValue={todaysDate} className={classes.formInput}></input>
+        </div>
+        <div className={classes.formControls}> 
+            <button className={classes.formButton}> Get Data </button>
+            </div>
+            </div>
+       
         </form>
     </div>
  <LineChartLarge chartData={currentChartData} chartOptions={currentChartOptions}/>
