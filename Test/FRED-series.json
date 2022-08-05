@@ -2,7 +2,8 @@
   {
     "AdvancedRetailSalesTrade" : "RSXFS",
     "AdvanceRetailSalesAndFoodService" : "RSAFS",
-    "CoreCpiIndex" : "CPILFESL",
+    "CpiIndexCore" : "CPILFESL",
+    "CpiIndexHeadline" : "CPIAUCSL",
     "CpiChgPrevPeriord" : "CPALTT01USM657N",
     "CpiPrevYear" : "CPALTT01USM659N",
     "DurableGoods" : "DGORDER",
@@ -11,7 +12,7 @@
     "FedFunds" : "FEDFUNDS",
     "FedFundsUpperTarget" : "DFEDTARU",
     "GDP" : "GDP",
-    "HeadCPIIndex" : "CPIAUCSL",
+   
     "HomeSupply" : "MSACSR",
     "HomePriceMedianUS" : "MSPUS",
     "HomePriceCaseShiller": "CSUSHPISA",
@@ -33,11 +34,7 @@
     "TenYearInflationIndexTreasury" : "DFII10",
     "TenYearTreasury" : "DGS10",
     
-    "UnemploymentRate" : "UNRATE",
+    "UnemploymentRate" : "UNRATE"
     
-    "observation" : "https://api.stlouisfed.org/fred/releases?observation_start:2019-07-01&observation_end:2022-07-22&api_key:3930e57c78d990d30f7d376f5c406e2e&file_type:json",
-    "release":"https://api.stlouisfed.org/fred/series/release?series_id=GDP&api_key=https://api.stlouisfed.org/fred/release/dates?release_id=82&api_key=3930e57c78d990d30f7d376f5c406e2e",
-    "releaseDates":"https://api.stlouisfed.org/fred/release/dates?release_id=52&api_key=3930e57c78d990d30f7d376f5c406e2e",
-    "FutureReleaseDates":"https://api.stlouisfed.org/fred/release/dates?release_id=52&include_release_dates_with_no_data=true&sort_order=desc&limit=4&api_key=3930e57c78d990d30f7d376f5c406e2e"
   }
 

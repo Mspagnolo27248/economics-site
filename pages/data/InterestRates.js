@@ -100,7 +100,7 @@ export async function getStaticProps(){
     const tenYear =  await FetchSeriesObservationData(fredCodes.TenYearTreasury,start_date,end_date);
     const tensMinusTwos = await FetchSeriesObservationData(fredCodes.IntrestRatesTensLessTwos,start_date,end_date);
     const fedFunds = await FetchSeriesObservationData(fredCodes.FedFunds,start_date,end_date);
-    const breakevens = await FetchSeriesObservationData(fredCodes.TenYearBreakEven,'2000-01-01',end_date);
+    const breakevens = await FetchSeriesObservationData(fredCodes.TenYearBreakEven,start_date,end_date);
     const fedFundsTarget = await FetchSeriesObservationData(fredCodes.FedFundsUpperTarget,start_date,end_date);
 
    

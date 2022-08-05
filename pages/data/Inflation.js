@@ -68,8 +68,8 @@ export async function getStaticProps(){
     
     const cpiMom =  await FetchSeriesObservationData(fredCodes.CpiChgPrevPeriord,start_date,end_date);
     const cpiYoy =  await FetchSeriesObservationData(fredCodes.CpiPrevYear,start_date,end_date);
-    const coreCpiIndex = await FetchSeriesObservationData(fredCodes.coreCpiIndex,start_date,end_date)
-    const headCpiIndex = await FetchSeriesObservationData(fredCodes.headCPIIndex,start_date,end_date)
+    const coreCpiIndex = await FetchSeriesObservationData(fredCodes.CpiIndexCore,start_date,end_date)
+    const headCpiIndex = await FetchSeriesObservationData(fredCodes.CpiIndexHeadline,start_date,end_date)
 
         return{
             props:{
