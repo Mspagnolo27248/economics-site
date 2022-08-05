@@ -13,7 +13,7 @@ const UnemploymentChartOptions = SetChartOptions('Unemployment Rate')
 const UnemplymentChartData =  SetChartData(
 props.UnemploymentRate.observations.map((item)=>item.value),
 props.UnemploymentRate.observations.map((item)=>item.date),
-'%'
+' % of Unemployed'
 )
 
 
@@ -21,7 +21,7 @@ const LaborForceChartOptions = SetChartOptions('Labor Force Participation Rate')
 const LaborForceChartData =  SetChartData(
 props.LaborForceParticipation.observations.map((item)=>item.value),
 props.LaborForceParticipation.observations.map((item)=>item.date),
-'%'
+'% of Total Labor Force'
 )
 
 
@@ -29,7 +29,7 @@ const EmploymentChartOptions = SetChartOptions('Employeed Workers')
 const EmploymentChartData =  SetChartData(
 props.Employment.observations.map((item)=>item.value),
 props.Employment.observations.map((item)=>item.date),
-'Workers'
+'Thousands of Workers'
 )
 
 
@@ -37,8 +37,7 @@ const TotalLaborForceChartOptions = SetChartOptions('Total Labor Force  (Workers
 const TotalLaborForceChartData =  SetChartData(
 props.LaborForce.observations.map((item)=>item.value),
 props.LaborForce.observations.map((item)=>item.date),
-'Workers'
-)
+'Thousands of People');
 
 
   return (

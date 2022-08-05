@@ -30,14 +30,14 @@ const coreCpiIndexChartOptions = SetChartOptions('Core CPI Index')
 const coreCpiIndexData = SetChartData(
     props.coreCpiIndex.observations.map((item)=>item.value),
     props.coreCpiIndex.observations.map((item)=>item.date),
-      '%'
+      'Index'
       )
 
 const headCpiIndexChartOptions = SetChartOptions(' CPI Index')
 const headCpiIndexData = SetChartData(
     props.headCpiIndex.observations.map((item)=>item.value),
     props.headCpiIndex.observations.map((item)=>item.date),
-      '%'
+      'Index'
       )
 
 
@@ -64,7 +64,7 @@ export async function getStaticProps(){
     const fredCodes = GetTestData('FRED-series.json');
     const now = new Date().toISOString().substring(0,10);
     const start_date = '2015-10-01';
-    const end_date =  now.toString();
+    const end_date =    new Date().toISOString().split('T')[0];
     
     const cpiMom =  await FetchSeriesObservationData(fredCodes.CpiChgPrevPeriord,start_date,end_date);
     const cpiYoy =  await FetchSeriesObservationData(fredCodes.CpiPrevYear,start_date,end_date);
