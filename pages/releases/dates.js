@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { GetTestData } from '../../Utilities/fs_wrapper';
 import { FetchReleaseCodes } from '../../Utilities/fetch-fred'
 
@@ -9,18 +9,33 @@ export default function ReleaseDates(props) {
 
 
   return (
-    <div>dates
-    {JSON.stringify(props.data)}
-    </div>
+    <Fragment>
+      <div>
+        <h1>Upcoming Economic Data Release Dates</h1>
+      </div>
+
+      {Object.values(props.FutureReleaseDate).map((item)=>{return <div>
+      <div>
+      {props.FriendlyName[Object.keys(item)[0]]}
+      </div>
+      <div>
+        {Object.values(item)[0].map((dates)=> {return <div>{dates} </div>})}
+      </div>
+     </div>
+      }
+      )
+      }
+    </Fragment>
   )
 }
 
 
 
 export async function getStaticProps(){
-  const seriesList = GetTestData('ReleaseCodes.json');
-  const  FutureReleaseDate = []
-
+const seriesList = GetTestData('ReleaseCodes.json');
+const  FutureReleaseDate = []
+const FriendlyName = {}
+seriesList.map((item) => {FriendlyName[item.seriesId]=item.seriesName})
 const getFredSync = async (release_id)=>{   
       const fredUrl = `https://api.stlouisfed.org/fred/release/dates?release_id=${release_id}&`+
       "include_release_dates_with_no_data=true&sort_order=desc&limit"+
@@ -42,7 +57,8 @@ const getFredSync = async (release_id)=>{
 
 
       return  {props:{
-        data:FutureReleaseDate
+        FutureReleaseDate:FutureReleaseDate,
+        FriendlyName:FriendlyName,
       }
       }
       }
