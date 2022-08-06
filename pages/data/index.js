@@ -38,7 +38,7 @@ export default function DataHomePage() {
           <div className='card' onClick={clickHandler} id='GDP'>
               <h2>GDP Data</h2>
               <p>GDP is the measure of economic output for the country. </p>
-              <Link href='/data/gdp'>GDP</Link>
+              <Link href='/data/GDP'>GDP</Link>
           </div>
 
           <div className='card' onClick={clickHandler} id='Inflation'>
