@@ -27,3 +27,15 @@ return jsonObj
 
 }
 
+
+export async function FetchReleaseCodes(series_id= ['GDP']){
+const releases = []
+for(const series of series_id){
+    const data = await fetch(`https://api.stlouisfed.org/fred/series/release?series_id=`+
+                                `${series}&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json`)
+    const json = await data.json();
+    releases.push(json)
+}
+return releases
+}
+

@@ -11,3 +11,19 @@ export const GetTestData=  (file) =>{
     console.log(testDataPath)
     return data
 }
+
+export const WriteToFile = (path,fileName,jsonData)=>{
+    let testDataPath = path.join(process.cwd(),path)
+    fs.writeFile(testDataPath+fileName, jsonData
+    ,(err)=>{if(err){
+      console.log(err)
+      return 
+    }
+      else{
+        console.log('Success')
+      return  
+      }
+    
+    }
+    )
+}
