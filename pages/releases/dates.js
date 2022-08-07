@@ -14,12 +14,12 @@ export default function ReleaseDates(props) {
         <h1>Upcoming Economic Data Release Dates</h1>
       </div>
 
-      {Object.values(props.FutureReleaseDate).map((item)=>{return <div>
-      <div>
+      {Object.values(props.FutureReleaseDate).map((item)=>{return <div key={props.FriendlyName[Object.keys(item)[0]]}>
+      <div >
       {props.FriendlyName[Object.keys(item)[0]]}
       </div>
-      <div>
-        {Object.values(item)[0].map((dates)=> {return <div>{dates} </div>})}
+      <div >
+        {Object.values(item)[0].map((dates)=> {return <div key={props.FriendlyName[Object.keys(item)[0]]+dates}>{dates} </div>})}
       </div>
      </div>
       }
