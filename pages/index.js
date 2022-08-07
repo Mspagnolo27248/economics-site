@@ -36,7 +36,7 @@ export default function Home() {
         <div className='card' onClick={clickHandler} id='releases'>
           <h2>FRED Releases</h2>
           <p>Review the latest economic release data</p>
-          <Link href='/release'>Releases</Link>
+          <Link href='/releases'>Releases</Link>
         </div>
 
         <div className='card' onClick={clickHandler} id='series'>
