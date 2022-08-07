@@ -39,7 +39,7 @@ seriesList.map((item) => {FriendlyName[item.seriesId]=item.seriesName})
 const getFredSync = async (release_id)=>{   
       const fredUrl = `https://api.stlouisfed.org/fred/release/dates?release_id=${release_id}&`+
       "include_release_dates_with_no_data=true&sort_order=desc&limit"+
-      "=4&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json"
+      "=5&api_key=3930e57c78d990d30f7d376f5c406e2e&file_type=json"
       const data = await fetch(fredUrl);
       const jsonData = await data.json();
       return jsonData
