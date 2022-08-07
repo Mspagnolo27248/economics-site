@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import classes from './releases.module.css'
 import { GetTestData } from '../../Utilities/fs_wrapper'
 import Link from 'next/link'
+import { FetchSeriesObservationData } from '../../Utilities/fetch-fred'
 
 
 
@@ -23,7 +24,7 @@ export default function ReleasePage
         <div className={classes.gridItem}> Current Release </div>
         <div className={classes.gridItem} > Prior Release </div>
         <div className={classes.gridItem}>  Two Back Release  </div>
-    {props.testData.map((item)=>{
+    {props.releaseData.map((item)=>{
         return (
        <Fragment  key={item.serries_id}>
        <div className={`${classes.gridItem} ${classes.gridItem1} `} > {item.serries_id} </div>
@@ -44,12 +45,23 @@ export default function ReleasePage
 
 
 export async function getStaticProps(){
- 
-    const testData = GetTestData('releaseTestData.json');
+    //{"serries_id":"Gross Domestic Product","current":951,"prior":656,"twoback":989}
+    const seriesList = GetTestData('ReleaseCodes.json');
+    const releaseData = []
+    for (const series of seriesList){
+       const allObservations = await FetchSeriesObservationData(series.seriesId)
+
+       const sortedDates = allObservations.observations.sort((a,b) => (a.date > b.date) ? 1 : ((b.date > a.date) ? -1 : 0));
+       releaseData.push({serries_id:series.seriesName,
+        current:sortedDates[0].value,
+       prior:sortedDates[1].value,
+        twoback:sortedDates[2].value})
+
+    }
    
         return{
             props:{
-                testData:testData,
+                releaseData:releaseData,
              
 
             }
