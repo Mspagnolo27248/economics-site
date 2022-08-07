@@ -24,13 +24,13 @@ export default function ReleasePage
         <div className={classes.gridItem}> Current Release </div>
         <div className={classes.gridItem} > Prior Release </div>
         <div className={classes.gridItem}>  Two Back Release  </div>
-    {props.releaseData.map((item)=>{
+    {props.releaseData.map((item,idx)=>{
         return (
-       <Fragment  key={item.serries_id}>
+       <Fragment  key={idx}>
        <div className={`${classes.gridItem} ${classes.gridItem1} `} > {item.serries_id} </div>
-        <div className={classes.gridItem}> {item.current}  </div>
-        <div className={classes.gridItem} > {item.prior}  </div>
-        <div className={classes.gridItem}>  {item.twoback}   </div>
+        <div className={classes.gridItem}> {(+item.current).toLocaleString("en-US")}  </div>
+        <div className={classes.gridItem} > {(+item.prior).toLocaleString("en-US")}  </div>
+        <div className={classes.gridItem}>  {(+item.twoback).toLocaleString("en-US")}   </div>
        </Fragment>
        
  
