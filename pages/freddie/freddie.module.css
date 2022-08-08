@@ -1,0 +1,39 @@
+.cardList{
+    display: block;
+
+}
+
+.cardBlog{
+    margin-left: 15%;
+    margin-bottom: 50px;;
+    width: 70%;
+}
+
+.blogTitle{
+    margin-bottom: 0px;
+
+}
+.blogSummary{
+
+
+}
+
+.blogText{
+
+}
+
+.blogDate{
+    margin-top: 0px;
+}
+
+.blogImg{
+
+
+height: 200px;
+width: 400px;
+
+
+
+    
+      
+}

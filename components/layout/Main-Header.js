@@ -23,7 +23,7 @@ export default function MainHeader() {
                 <Link href='/series'>Series</Link>
             </li>
             <li className={classes.link}>
-                <Link href='/data/InterestRates'>Rates</Link>
+                <Link href='/freddie'>Blog</Link>
             </li>
         </ul>
     </nav>
