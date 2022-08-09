@@ -27,23 +27,31 @@ export default function Home() {
 
       <div className='card-list'>
 
+      <Link href='/data'><a>     
         <div className='card' onClick={clickHandler} id='data'>
           <h2>Data Center</h2>
-          <p>Access charts that analyis sectors of the economy</p>
-          <Link href='/data'>Data Center</Link>
+          <p>Access charts that analyis sectors of the economy</p>        
         </div>
-
+        </a>
+        </Link>
+        <Link href='/releases'>
+        <a>
         <div className='card' onClick={clickHandler} id='releases'>
           <h2>FRED Releases</h2>
-          <p>Review the latest economic release data</p>
-          <Link href='/releases'>Releases</Link>
+          <p>Review the latest economic release data</p>       
         </div>
+        </a>
+        </Link>
 
+        <Link href='/series'>
+        <a>
         <div className='card' onClick={clickHandler} id='series'>
           <h2>FRED Series</h2>
-          <p>Select a FRED economic serires to review the historical data and chart.</p>
-          <Link href='/series'>Series</Link>
+          <p>Select a FRED economic serires to review the historical data and chart.</p>      
         </div>
+        </a>
+        </Link>
+    
 
      
       </div>
