@@ -28,13 +28,15 @@
     "PersonalConsumptionIndex" : "PCEPI" ,
     "PersonalSavingsRate": "PSAVERT",
     "PotentialNominalGDP" : "NGDPPOT",
+    "Productivity" : "OPHNFB",
     "RealGDP" : "GDPC1",
     "RetailSalesAndFoodService" : "MRTSSM44X72USS",
     "TenYearBreakEven" : "T10YIE",
     "TenYearInflationIndexTreasury" : "DFII10",
     "TenYearTreasury" : "DGS10",
     
-    "UnemploymentRate" : "UNRATE"
+    "UnemploymentRate" : "UNRATE",
+    "UnemploymentRate U6": "U6RATE"
     
   }
 
