@@ -14,7 +14,7 @@ export default function MainHeader() {
     <nav className={classes.navigation}>
         <ul>
             <li className={classes.link}>
-                <Link href='/data'>Data Center</Link>
+                <Link href='/data'>Data</Link>
             </li>
             <li className={classes.link}>
                 <Link href='/releases'>Releases</Link>
