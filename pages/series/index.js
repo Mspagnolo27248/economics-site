@@ -31,6 +31,9 @@ const [currentData,setCurrentData] = useState(props.data)
     const observation_start = useRef();
     const observation_end = useRef();
    const todaysDate = new Date().toISOString().split('T')[0]
+   const d =  new Date();
+   d.setFullYear(d.getFullYear()-5);
+   const startDate = d.toISOString().substring(0,10);
 useEffect(()=>{
     setCurrentChartData(
         SetChartData(
@@ -95,7 +98,7 @@ useEffect(()=>{
           
            <div className={classes.formControls}> 
           <label htmlFor='observation_start'  className={classes.formLabels}>Start Date</label>
-            <input id ='observation_start' ref={observation_start} placeholder='yyyy-mm-dd' className={classes.formInput}></input>
+            <input id ='observation_start' ref={observation_start} placeholder='yyyy-mm-dd'  defaultValue= {startDate} className={classes.formInput}></input>
 
           </div>
            
@@ -119,7 +122,11 @@ useEffect(()=>{
 
 export async function getStaticProps(context){
     const serries = 'GDP'
-    const data =  await FetchSeriesObservationData(serries);
+    const now = new Date().toISOString().substring(0,10);
+    const d =  new Date();
+    d.setFullYear(d.getFullYear()-5);
+    const startDate = d.toISOString().substring(0,10);
+    const data =  await FetchSeriesObservationData(serries,startDate,now);
     const fredItems = GetTestData('FRED-series.json')
     return {
         props:{data:data,

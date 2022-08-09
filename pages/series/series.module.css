@@ -1,5 +1,4 @@
-.formLabels {
-   
+      .formLabels {   
         color: #212b26;
         font-weight: bold;
         display: block;
@@ -7,8 +6,7 @@
 
 
       .formContainer{
-        display: flex;
-     
+        display: flex;    
        
         margin-left: 20%;
      
@@ -37,3 +35,14 @@
         padding-right:10px;
       }
 
+
+        /* Media Query for Tablets Ipads portrait mode */
+  @media (min-width: 200px) and (max-width: 1024px){
+    .formLabels {
+      
+      color: whitesmoke;
+      font-weight: bold;
+      display: block;
+    }
+
+  }

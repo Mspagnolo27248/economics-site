@@ -22,7 +22,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-       <h1>Welcome to ECON 101 </h1>
+       <h1>Welcome to Macro Economic Data </h1>
        <p>Website with the latest economic releases and historical data.</p>
 
       <div className='card-list'>
@@ -30,7 +30,7 @@ export default function Home() {
       <Link href='/data'><a>     
         <div className='card' onClick={clickHandler} id='data'>
           <h2>Data Center</h2>
-          <p>Access charts that analyis sectors of the economy</p>        
+          <p>Access charts that analyze sectors of the economy.</p>        
         </div>
         </a>
         </Link>
@@ -38,7 +38,7 @@ export default function Home() {
         <a>
         <div className='card' onClick={clickHandler} id='releases'>
           <h2>FRED Releases</h2>
-          <p>Review the latest economic release data</p>       
+          <p>Review the latest economic data releases.</p>       
         </div>
         </a>
         </Link>
@@ -47,7 +47,7 @@ export default function Home() {
         <a>
         <div className='card' onClick={clickHandler} id='series'>
           <h2>FRED Series</h2>
-          <p>Select a FRED economic serires to review the historical data and chart.</p>      
+          <p>Select a FRED economic series to review the historical data and chart.</p>      
         </div>
         </a>
         </Link>

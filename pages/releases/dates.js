@@ -16,10 +16,17 @@ export default function ReleaseDates(props) {
 
       {Object.values(props.FutureReleaseDate).map((item)=>{return <div key={props.FriendlyName[Object.keys(item)[0]]}>
       <div >
+      <p>
       {props.FriendlyName[Object.keys(item)[0]]}
+      </p>
+
+    
       </div>
       <div >
-        {Object.values(item)[0].map((dates)=> {return <div key={props.FriendlyName[Object.keys(item)[0]]+dates}>{dates} </div>})}
+      <p>
+      {Object.values(item)[0].map((dates)=> {return <div key={props.FriendlyName[Object.keys(item)[0]]+dates}>{dates} </div>})}
+      </p>
+       
       </div>
      </div>
       }

@@ -34,7 +34,7 @@
     "TenYearBreakEven" : "T10YIE",
     "TenYearInflationIndexTreasury" : "DFII10",
     "TenYearTreasury" : "DGS10",
-    
+    "TwoYearTreasury" :"DGS2",
     "UnemploymentRate" : "UNRATE",
     "UnemploymentRate U6": "U6RATE"
     
