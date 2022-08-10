@@ -75,7 +75,8 @@ export async function getStaticProps(){
           AdvancedRetailSales:AdvancedRetailSales,
           RetailSales:RetailSales,
           DurableGoods:DurableGoods,          
-        }
+        },
+        revalidate:300
     }
 
    

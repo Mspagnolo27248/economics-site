@@ -76,10 +76,11 @@ export async function getStaticProps(){
                 cpiMom :cpiMom,
                 cpiYoy:cpiYoy,
                 coreCpiIndex:coreCpiIndex,
-                headCpiIndex:headCpiIndex,
-               
+                headCpiIndex:headCpiIndex,              
+            },
+            revalidate:300
 
-            }
+            
         }
 
     }

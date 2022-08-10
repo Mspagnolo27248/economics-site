@@ -71,10 +71,10 @@ export async function getStaticProps(){
                 UnemploymentRate:UnemploymentRate,
                 LaborForceParticipation:LaborForceParticipation,
                 Employment:Employment,
-                LaborForce:LaborForce,
-               
+                LaborForce:LaborForce,              
 
-            }
+            },
+            revalidate:300
         }
 }
 

@@ -111,8 +111,8 @@ export async function getStaticProps(){
                 fedFundsTarget:fedFundsTarget,
                 fedFunds:fedFunds,
                 breakevens:breakevens,
-
-            }
+            },
+            revalidate:300
         }
 }
 
