@@ -83,7 +83,7 @@ export async function getStaticProps(){
                 coreCpiMom:coreCpiMom,
                 headCpiMom:headCpiMom,              
             },
-            revalidate:300
+            revalidate:60
 
             
         }

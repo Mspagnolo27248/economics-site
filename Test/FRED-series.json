@@ -11,9 +11,9 @@
     "HomeSalesNewStarts": "HOUST",
     "FedFunds" : "FEDFUNDS",
     "FedFundsUpperTarget" : "DFEDTARU",
-    "GDP" : "GDP",
-   
-    "HomeSupply" : "MSACSR",
+    "GDP" : "GDP",   
+    "HomeSupply:New" : "MSACSR",
+    "HomeSupply:Existing" : "HOSSUPUSM673N",
     "HomePriceMedianUS" : "MSPUS",
     "HomePriceCaseShiller": "CSUSHPISA",
     "IndustrialProduction" : "INDPRO",
@@ -29,12 +29,14 @@
     "PersonalSavingsRate": "PSAVERT",
     "PotentialNominalGDP" : "NGDPPOT",
     "Productivity" : "OPHNFB",
+    "ProducePriceIndex":"PPIACO",
     "RealGDP" : "GDPC1",
     "RetailSalesAndFoodService" : "MRTSSM44X72USS",
     "TenYearBreakEven" : "T10YIE",
     "TenYearInflationIndexTreasury" : "DFII10",
     "TenYearTreasury" : "DGS10",
     "TwoYearTreasury" :"DGS2",
+    "TradeBalance:Goods & Services":"BOPGSTB",
     "UnemploymentRate" : "UNRATE",
     "UnemploymentRate U6": "U6RATE"
     

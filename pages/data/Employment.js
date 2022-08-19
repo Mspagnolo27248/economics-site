@@ -74,7 +74,7 @@ export async function getStaticProps(){
                 LaborForce:LaborForce,              
 
             },
-            revalidate:300
+            revalidate:60
         }
 }
 
