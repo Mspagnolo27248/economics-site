@@ -50,6 +50,12 @@ props.fedFundsTarget.observations.map((item)=>item.date),
 '%'
 )
 
+const  mortgageChartOptions = SetChartOptions('30 Year Fixed Mortgage')
+const  mortgaeChartData =  SetChartData(
+props.mortgageRate.observations.map((item)=>item.value),
+props.mortgageRate.observations.map((item)=>item.date),
+'%'
+)
 
 const TenMinusTwosChartOptions = SetChartOptions('10yr Minus 2yr Spreads')
 const TenMinusTwosChartData = {
@@ -93,6 +99,7 @@ const TenMinusTwosChartData = {
 
 export async function getStaticProps(){
     const fredCodes = GetTestData('FRED-series.json');
+    const fredCodes2 = GetTestData('FREDSeries.json');
     const now = new Date().toISOString().substring(0,10);
     const start_date = '2015-10-01';
     const end_date =    new Date().toISOString().split('T')[0];
@@ -102,6 +109,7 @@ export async function getStaticProps(){
     const fedFunds = await FetchSeriesObservationData(fredCodes.FedFunds,start_date,end_date);
     const breakevens = await FetchSeriesObservationData(fredCodes.TenYearBreakEven,start_date,end_date);
     const fedFundsTarget = await FetchSeriesObservationData(fredCodes.FedFundsUpperTarget,start_date,end_date);
+    const mortgageRate = await FetchSeriesObservationData(fredCodes2.MortgageRate.series,start_date,end_date);
 
    
         return{
@@ -111,6 +119,8 @@ export async function getStaticProps(){
                 fedFundsTarget:fedFundsTarget,
                 fedFunds:fedFunds,
                 breakevens:breakevens,
+                mortgageRate:mortgageRate,
+                
             },
             revalidate:300
         }

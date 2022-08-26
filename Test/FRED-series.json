@@ -8,6 +8,7 @@
     "CpiChgPrevYear" : "CPALTT01USM659N",
     "DurableGoods" : "DGORDER",
     "HomeSalesExisting" : "EXHOSLUSM495S",
+    "HomeSalesNew": "HSN1F",
     "HomeSalesNewStarts": "HOUST",
     "FedFunds" : "FEDFUNDS",
     "FedFundsUpperTarget" : "DFEDTARU",
