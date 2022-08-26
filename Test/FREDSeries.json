@@ -17,7 +17,6 @@
 "HomePriceMedianUS" : {"series" : "MSPUS","type":"$","default":"","release":"","friendly":"Home Prices U.S (median)"},
 "HomePriceCaseShiller" : {"series" : "CSUSHPISA","type":"$","default":"","release":"","friendly":"CaseShiller Home Price"},
 "IndustrialProduction" : {"series" : "INDPRO","type":"$","default":"","release":"","friendly":"Industrial Production "},
-"IntrestRatesTensLessTwos" : {"series" : "T10Y2Y","type":"%","default":"","release":"","friendly":"10year Treasury Less 2 Year Treasury"},
 "LaborForce" : {"series" : "CLF16OV","type":"people","default":"","release":"","friendly":"Labor Force (Total)"},
 "LaborForceParticipation" : {"series" : "CIVPART","type":"%","default":"","release":"","friendly":"Labor Forece Participation Rate"},
 "M2-MoneySupply" : {"series" : "WM2NS","type":"$","default":"","release":"","friendly":"Money Supply (M2)"},
@@ -31,11 +30,12 @@
 "ProducePriceIndex" : {"series" : "PPIACO","type":"index","default":"pct-m","release":"","friendly":"Producer Price Index"},
 "RealGDP" : {"series" : "GDPC1","type":"$","default":"pct-y","release":"","friendly":"Gross Domestic Product (Real)"},
 "RetailSalesAndFoodService" : {"series" : "MRTSSM44X72USS","type":"$","default":"","release":"","friendly":"Retail Sales: Trade and Foodservice"},
-"TenYearBreakEven" : {"series" : "T10YIE","type":"$","default":"","release":"","friendly":"Ten Year Breakeven Rates"},
-"TenYearInflationIndexTreasury" : {"series" : "DFII10","type":"$","default":"","release":"","friendly":"Ten Year Inflation Protected Treasury "},
-"TenYearTreasury" : {"series" : "DGS10","type":"$","default":"","release":"","friendly":"10 Year Treasury "},
-"TwoYearTreasury" : {"series" : "DGS2","type":"$","default":"","release":"","friendly":"2 Year Treasury "},
+"TenYearBreakEven" : {"series" : "T10YIE","type":"$","default":"%","release":"","friendly":"Ten Year Breakeven Rates"},
+"TenYearInflationIndexTreasury" : {"series" : "DFII10","type":"%","default":"","release":"","friendly":"Ten Year Inflation Protected Treasury "},
+"TenYearTreasury" : {"series" : "DGS10","type":"%","default":"","release":"","friendly":"10 Year Treasury "},
+"TwoYearTreasury" : {"series" : "DGS2","type":"%","default":"","release":"","friendly":"2 Year Treasury "},
+"TensMinusTwosTreasury" : {"series" : "T10Y2Y","type":"%","default":"","release":"","friendly":"10year Treasury Less 2 Year Treasury"},
 "TradeBalance" : {"series" : "BOPGSTB","type":"$","default":"","release":"","friendly":"U.S Trade Balance "},
-"UnemploymentRate" : {"series" : "UNRATE","type":"$","default":"","release":"","friendly":"Unemployment Rate (U3)"},
-"UnemploymentRate U6" : {"series" : "U6RATE","type":"$","default":"","release":"","friendly":"Unemployment Rate (U6)"}
+"UnemploymentRate" : {"series" : "UNRATE","type":"%","default":"","release":"","friendly":"Unemployment Rate (U3)"},
+"UnemploymentRate U6" : {"series" : "U6RATE","type":"%","default":"","release":"","friendly":"Unemployment Rate (U6)"}
 }

@@ -26,20 +26,23 @@ export default function SeriesPage(props) {
 
 const [currentData,setCurrentData] = useState(props.data)
 
+const [currentSeries,setCurrentSeries] = useState({series: "GDP",type:"$",default:"pct-a",release:"",friendly:"Gross Domestic Product (Nominal)"})
+    
+const series_id = useRef('GDP');
+const observation_start = useRef();
+const observation_end = useRef();
+const todaysDate = new Date().toISOString().split('T')[0]
+const d =  new Date();
+d.setFullYear(d.getFullYear()-5);
+const startDate = d.toISOString().substring(0,10);
 
-    const series_id = useRef('GDP');
-    const observation_start = useRef();
-    const observation_end = useRef();
-   const todaysDate = new Date().toISOString().split('T')[0]
-   const d =  new Date();
-   d.setFullYear(d.getFullYear()-5);
-   const startDate = d.toISOString().substring(0,10);
+
 useEffect(()=>{
     setCurrentChartData(
         SetChartData(
         currentData.observations.map((item)=>item.value),
         currentData.observations.map((item)=>item.date),
-        '$'
+        currentSeries.type
         ));
 
         const selectedCurrentIndex = series_id.current.selectedIndex;
@@ -47,14 +50,14 @@ useEffect(()=>{
         const title = selectedOption+' - '+series_id.current.value
 
         setCurrentChartOptions(SetChartOptions(title))
-},[currentData])
+        },[currentData])
 
     const submitHandler= (event)=>{
         event.preventDefault();
         const seriesId = event.target.series_id.value;
         const observation_start = event.target.observation_start.value;
         const  observation_end = event.target.observation_end.value;
-
+        const seriesName = event.target.text;
         fetch('/api/cpi',
         {method: 'POST', 
         body:JSON.stringify(
@@ -65,8 +68,10 @@ useEffect(()=>{
         )})
         .then((response)=> response.json())
         .then((data)=>{
-          
-            setCurrentData(data)
+            setCurrentSeries(fredItems.fiter(item=>  item ==seriesName));
+            setCurrentData(data);
+            
+            
      
         })
        
@@ -86,10 +91,10 @@ useEffect(()=>{
          
                {Object.keys(props.fredItems).map((key,index)=>{
                 if(key==='GDP'){
-                    return <option key={index}   value={props.fredItems[key]}>{key}</option>
+                    return <option key={index}   value={props.fredItems[key].series}>{key}</option>
                 }
                 else{
-                    return <option key={index} value={props.fredItems[key]}>{key}</option>
+                    return <option key={index} value={props.fredItems[key].series}>{key}</option>
                 }
                
                })}
@@ -127,7 +132,8 @@ export async function getStaticProps(context){
     d.setFullYear(d.getFullYear()-5);
     const startDate = d.toISOString().substring(0,10);
     const data =  await FetchSeriesObservationData(serries,startDate,now);
-    const fredItems = GetTestData('FRED-series.json')
+    const fredItems = GetTestData('FREDSeries.json')
+    
     return {
         props:{data:data,
             serries:serries,
