@@ -45,10 +45,10 @@ useEffect(()=>{
         currentSeries.type
         ));
 
-        const selectedCurrentIndex = series_id.current.selectedIndex;
-        const selectedOption = series_id.current.options[selectedCurrentIndex].text;
-        const title = selectedOption+' - '+series_id.current.value
-
+        // const selectedCurrentIndex = series_id.current.selectedIndex;
+        // const selectedOption = series_id.current.options[selectedCurrentIndex].text;
+        // const title = selectedOption+' - '+series_id.current.value
+            const title = currentSeries.friendly+" "+currentSeries.series
         setCurrentChartOptions(SetChartOptions(title))
         },[currentData])
 
@@ -68,7 +68,10 @@ useEffect(()=>{
         )})
         .then((response)=> response.json())
         .then((data)=>{
-            setCurrentSeries(fredItems.fiter(item=>  item ==seriesName));
+
+            const selectedCurrentIndex = series_id.current.selectedIndex;
+            const selectedOption = series_id.current.options[selectedCurrentIndex].text;
+            setCurrentSeries(props.fredItems[selectedOption]);
             setCurrentData(data);
             
             
