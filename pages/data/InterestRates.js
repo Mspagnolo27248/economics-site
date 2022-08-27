@@ -97,7 +97,7 @@ const TenMinusTwosChartData = {
   )
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
     const fredCodes = GetTestData('FRED-series.json');
     const fredCodes2 = GetTestData('FREDSeries.json');
     const now = new Date().toISOString().substring(0,10);
@@ -121,8 +121,7 @@ export async function getStaticProps(){
                 breakevens:breakevens,
                 mortgageRate:mortgageRate,
                 
-            },
-            revalidate:300
+            }
         }
 }
 

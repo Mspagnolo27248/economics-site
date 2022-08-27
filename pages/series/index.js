@@ -31,6 +31,8 @@ const [currentSeries,setCurrentSeries] = useState({series: "GDP",type:"$",defaul
 const series_id = useRef('GDP');
 const observation_start = useRef();
 const observation_end = useRef();
+const valueType = useRef();
+
 const todaysDate = new Date().toISOString().split('T')[0]
 const d =  new Date();
 d.setFullYear(d.getFullYear()-5);
@@ -57,13 +59,16 @@ useEffect(()=>{
         const seriesId = event.target.series_id.value;
         const observation_start = event.target.observation_start.value;
         const  observation_end = event.target.observation_end.value;
-        const seriesName = event.target.text;
-        fetch('/api/cpi',
+        const valueType = event.target.valueType.value;
+
+        
+        fetch('/api/fetch',
         {method: 'POST', 
         body:JSON.stringify(
             {series:seriesId,
             observation_end:observation_end,
-        observation_start:observation_start}
+            observation_start:observation_start,
+            valueType:valueType}
 
         )})
         .then((response)=> response.json())
@@ -71,7 +76,11 @@ useEffect(()=>{
 
             const selectedCurrentIndex = series_id.current.selectedIndex;
             const selectedOption = series_id.current.options[selectedCurrentIndex].text;
-            setCurrentSeries(props.fredItems[selectedOption]);
+            const seriesOptions = props.fredItems[selectedOption]
+            if(valueType!="value"){
+                seriesOptions.type = "%"
+            }
+            setCurrentSeries(seriesOptions);
             setCurrentData(data);
             
             
@@ -113,6 +122,15 @@ useEffect(()=>{
           <div className={classes.formControls}> 
         <label htmlFor='observation_end' placeholder='yyyy-mm-dd'  className={classes.formLabels}>End Date</label>
             <input id ='observation_end' ref={observation_end} placeholder='yyyy-mm-dd'defaultValue={todaysDate} className={classes.formInput}></input>
+        </div>
+        <div className={classes.formControls}> 
+        <label htmlFor='valueType'  className={classes.formLabels}>Type</label>
+            <select id='valueType' ref={valueType} defaultValue='value' className={classes.formInput}>
+                <option value="value"> Current Period</option>
+                <option value="m-pct">% Change (Period)</option>
+                <option value="y-pct">% Change (Yearly)</option>
+                <option value="a-pct">Annualized % Change</option>
+            </select>
         </div>
         <div className={classes.formControls}> 
             <button className={classes.formButton}> Get Data </button>
