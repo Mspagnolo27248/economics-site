@@ -30,7 +30,7 @@
 "ProducePriceIndex" : {"series" : "PPIACO","type":"index","default":"pct-m","release":"","friendly":"Producer Price Index"},
 "RealGDP" : {"series" : "GDPC1","type":"$","default":"pct-y","release":"","friendly":"Gross Domestic Product (Real)"},
 "RetailSalesAndFoodService" : {"series" : "MRTSSM44X72USS","type":"$","default":"","release":"","friendly":"Retail Sales: Trade and Foodservice"},
-"TenYearBreakEven" : {"series" : "T10YIE","type":"$","default":"%","release":"","friendly":"Ten Year Breakeven Rates"},
+"TenYearBreakEven" : {"series" : "T10YIE","type":"%","default":"","release":"","friendly":"Ten Year Breakeven Rates"},
 "TenYearInflationIndexTreasury" : {"series" : "DFII10","type":"%","default":"","release":"","friendly":"Ten Year Inflation Protected Treasury "},
 "TenYearTreasury" : {"series" : "DGS10","type":"%","default":"","release":"","friendly":"10 Year Treasury "},
 "TwoYearTreasury" : {"series" : "DGS2","type":"%","default":"","release":"","friendly":"2 Year Treasury "},
