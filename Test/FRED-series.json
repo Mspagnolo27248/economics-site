@@ -27,7 +27,7 @@
     "NonFarmEmployment" : "PAYEMS",
     "PersonalConsumption" : "PCE" ,
     "PersonalConsumptionIndex" : "PCEPI" ,
-    "PCEIndexExFoodandEnergy": "PCEPILFE",
+    "PersonalConsumptionIndex(Core)": "PCEPILFE",
     "PersonalSavingsRate": "PSAVERT",
     "PotentialNominalGDP" : "NGDPPOT",
     "Productivity" : "OPHNFB",

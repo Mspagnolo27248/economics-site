@@ -24,6 +24,7 @@
 "NonFarmEmployment" : {"series" : "PAYEMS","type":"$","default":"","release":"","friendly":"Non Farm - Payrolls"},
 "PersonalConsumption" : {"series" : "PCE" ,"type":"$","default":"","release":"","friendly":"Personal Consumption "},
 "PersonalConsumptionIndex" : {"series" : "PCEPI" ,"type":"index","default":"pct-m","release":"","friendly":"Personal Consumption Index"},
+"PersonalConsumptionIndex(Core)" : {"series" : "PCEPILFE" ,"type":"index","default":"pct-m","release":"","friendly":"Personal Consumption Index"},
 "PersonalSavingsRate" : {"series" : "PSAVERT","type":"%","default":"","release":"","friendly":"Personal Savings Rate"},
 "PotentialNominalGDP" : {"series" : "NGDPPOT","type":"$","default":"","release":"","friendly":"Potential Nominal GDP "},
 "Productivity" : {"series" : "OPHNFB","type":"rate","default":"","release":"","friendly":"Productivity Rate"},
