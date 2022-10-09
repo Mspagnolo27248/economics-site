@@ -82,9 +82,7 @@ export async function getServerSideProps(){
                 headCpiYoy:headCpiYoy,
                 coreCpiMom:coreCpiMom,
                 headCpiMom:headCpiMom,              
-            },
-            revalidate:60
-
+            }
             
         }
 

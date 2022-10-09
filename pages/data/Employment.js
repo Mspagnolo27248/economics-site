@@ -73,8 +73,7 @@ export async function getServerSideProps(){
                 Employment:Employment,
                 LaborForce:LaborForce,              
 
-            },
-            revalidate:60
+            }
         }
 }
 

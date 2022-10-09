@@ -75,8 +75,7 @@ export async function getServerSideProps(){
           AdvancedRetailSales:AdvancedRetailSales,
           RetailSales:RetailSales,
           DurableGoods:DurableGoods,          
-        },
-        revalidate:60
+        }
     }
 
    
