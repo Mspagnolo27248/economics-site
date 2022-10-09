@@ -59,8 +59,8 @@ const headCpiMomIndexData = SetChartData(
     </Fragment>
   )
 }
-
-export async function getStaticProps(){
+//getServerSideProps
+export async function getServerSideProps(){
     const fredCodes = GetTestData('FRED-series.json');
     const now = new Date().toISOString().substring(0,10);
     const start_date = '2015-10-01';

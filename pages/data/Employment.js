@@ -56,7 +56,7 @@ props.LaborForce.observations.map((item)=>item.date),
   )
 }
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
     const fredCodes = GetTestData('FRED-series.json');
     const now = new Date().toISOString().substring(0,10);
     const start_date = '2015-10-01';
